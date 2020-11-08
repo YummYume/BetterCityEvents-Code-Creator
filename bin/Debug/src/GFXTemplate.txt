@@ -1,0 +1,4 @@
+	spriteType = {
+		name = "GFX_bettercityevents_[STATUS_CITY]_[NAME_GFX]" #Name of the file you use in the code (picture = GFX_bettercityevents_...)
+		texturefile = "gfx/event_pictures/bettercityevents_[STATUS_CITY]_[NAME_GFX].dds" #Name of your file (please rename it that way)
+	}

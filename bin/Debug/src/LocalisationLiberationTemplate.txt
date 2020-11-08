@@ -1,0 +1,5 @@
+bettercitynews.[ID_EVENT_LIB].t:0 "The Liberation of [NAME_EVENT_CAP]"
+bettercitynews.[ID_EVENT_LIB].d:0 "[NAME_EVENT_CAP] has been liberated by [bettercitynews_fall_of_[NAME_EVENT]_owner.GetAdjective] forces, driving the [bettercitynews_fall_of_[NAME_EVENT]_controller.GetAdjective] troops out of the city."
+bettercitynews.[ID_EVENT_LIB].a:0 "Damn..."
+bettercitynews.[ID_EVENT_LIB].b:0 "[[ID_STATE].GetName] is liberated!"
+bettercitynews.[ID_EVENT_LIB].c:0 "Good news."

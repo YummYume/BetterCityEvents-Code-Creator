@@ -1,0 +1,39 @@
+# The Fall of [NAME_EVENT_CAP]
+news_event = {
+	id = bettercitynews.[ID_EVENT]
+	title = bettercitynews.[ID_EVENT].t
+	desc = bettercitynews.[ID_EVENT].d
+	picture = GFX_bettercityevents_fall_[NAME_EVENT]
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.[ID_EVENT].a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_[NAME_EVENT]_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_[NAME_EVENT]_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.[ID_EVENT].b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_[NAME_EVENT]_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_[NAME_EVENT]_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.[ID_EVENT].c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_[NAME_EVENT]_owner
+				tag = event_target:bettercitynews_fall_of_[NAME_EVENT]_controller
+            }
+        }
+	}
+}

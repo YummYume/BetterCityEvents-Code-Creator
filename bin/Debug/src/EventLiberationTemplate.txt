@@ -1,0 +1,39 @@
+# The Liberation of [NAME_EVENT_CAP]
+news_event = {
+	id = bettercitynews.[ID_EVENT_LIB]
+	title = bettercitynews.[ID_EVENT_LIB].t
+	desc = bettercitynews.[ID_EVENT_LIB].d
+	picture = GFX_bettercityevents_liberation_[NAME_EVENT]
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
+		name = bettercitynews.[ID_EVENT_LIB].a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_[NAME_EVENT]_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_[NAME_EVENT]_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.[ID_EVENT_LIB].b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_[NAME_EVENT]_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_[NAME_EVENT]_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.[ID_EVENT_LIB].c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_[NAME_EVENT]_owner
+				tag = event_target:bettercitynews_fall_of_[NAME_EVENT]_controller
+            }
+        }
+	}
+}

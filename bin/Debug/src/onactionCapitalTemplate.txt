@@ -1,0 +1,73 @@
+				else_if = { #[NAME_CITY_CAP]
+					limit = {
+						FROM.FROM = {
+							state = [ID_STATE]
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_[NAME_CITY]
+									has_global_flag = bettercitynews_liberation_of_[NAME_CITY]
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = [ID_STATE]
+								NOT = {
+									controls_state = [ID_STATE]
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = [ID_STATE]
+								NOT = {
+									owns_state = [ID_STATE]
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_[NAME_CITY]_owner
+							set_global_flag = bettercitynews_fall_of_[NAME_CITY]
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_[NAME_CITY]_controller
+							news_event = { id = bettercitynews.[ID_EVENT] hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_[NAME_CITY]
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_[NAME_CITY]
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_[NAME_CITY]_controller
+								NOT = {
+									controls_state = [ID_STATE]
+									owns_state = [ID_STATE]
+									tag = event_target:bettercitynews_fall_of_[NAME_CITY]_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_[NAME_CITY]_owner
+								controls_state = [ID_STATE]
+								owns_state = [ID_STATE]
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_[NAME_CITY]_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_[NAME_CITY]
+							set_global_flag = bettercitynews_liberation_of_[NAME_CITY]
+							news_event = { id = bettercitynews.[ID_EVENT_LIB] hours = 5 }
+						}
+					}
+				}

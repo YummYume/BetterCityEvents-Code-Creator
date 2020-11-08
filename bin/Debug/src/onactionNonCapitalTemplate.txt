@@ -1,0 +1,35 @@
+				else_if = { #[NAME_CITY_CAP]
+					limit = {
+						FROM.FROM = {
+							state = [ID_STATE]
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_[NAME_CITY]
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = [ID_STATE]
+							NOT = {
+								controls_state = [ID_STATE]
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = [ID_STATE]
+							NOT = {
+								owns_state = [ID_STATE]
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_[NAME_CITY]_owner
+						set_global_flag = bettercitynews_fall_of_[NAME_CITY]
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_[NAME_CITY]_controller
+						news_event = { id = bettercitynews.[ID_EVENT] hours = 5 }
+					}
+				}
