@@ -39,13 +39,6 @@ namespace HOI4EventGenerator
             newonaction.Show();
         }
 
-        private void editToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FormEditonaction newEditonaction;
-            newEditonaction = new FormEditonaction();
-            newEditonaction.Show();
-        }
-
         private void createGFXToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormCreateGFX newGFX;
@@ -58,13 +51,6 @@ namespace HOI4EventGenerator
             FormCreateLocalisation newLocalisation;
             newLocalisation = new FormCreateLocalisation();
             newLocalisation.Show();
-        }
-
-        private void editLocalisationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormEditLocalisation newEditLocalisation;
-            newEditLocalisation = new FormEditLocalisation();
-            newEditLocalisation.Show();
         }
 
         private void statesToolStripMenuItem_Click(object sender, EventArgs e)

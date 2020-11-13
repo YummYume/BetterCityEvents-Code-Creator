@@ -73,12 +73,6 @@
     <Compile Include="FormCreateLocalisation.Designer.cs">
       <DependentUpon>FormCreateLocalisation.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCreateonaction.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCreateonaction.Designer.cs">
-      <DependentUpon>FormCreateonaction.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormCreateEvent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,17 +85,11 @@
     <Compile Include="FormEditEvent.Designer.cs">
       <DependentUpon>FormEditEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditLocalisation.cs">
+    <Compile Include="FormCreateonaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditLocalisation.Designer.cs">
-      <DependentUpon>FormEditLocalisation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormEditonaction.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormEditonaction.Designer.cs">
-      <DependentUpon>FormEditonaction.cs</DependentUpon>
+    <Compile Include="FormCreateonaction.Designer.cs">
+      <DependentUpon>FormCreateonaction.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -125,8 +113,8 @@
     <EmbeddedResource Include="FormEditEvent.resx">
       <DependentUpon>FormEditEvent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditonaction.resx">
-      <DependentUpon>FormEditonaction.cs</DependentUpon>
+    <EmbeddedResource Include="FormCreateonaction.resx">
+      <DependentUpon>FormCreateonaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGitHubPictureInstructions.resx">
       <DependentUpon>FormGitHubPictureInstructions.cs</DependentUpon>

@@ -35,36 +35,37 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gFXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createGFXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localisationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createLocalisationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editLocalisationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureInstructionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelMainTitle = new System.Windows.Forms.Label();
             this.labelMainInfo = new System.Windows.Forms.Label();
             this.labelDisclaimer = new System.Windows.Forms.Label();
             this.labelPrimaryUse = new System.Windows.Forms.Label();
             this.labelWhereCode = new System.Windows.Forms.Label();
             this.groupBoxEvent = new System.Windows.Forms.GroupBox();
+            this.labelWarningEvent = new System.Windows.Forms.Label();
             this.labelEventPath = new System.Windows.Forms.Label();
             this.groupBoxonaction = new System.Windows.Forms.GroupBox();
+            this.labelWarningonaction = new System.Windows.Forms.Label();
             this.labelonactionPath = new System.Windows.Forms.Label();
             this.groupBoxGFX = new System.Windows.Forms.GroupBox();
+            this.labelWarningGFX = new System.Windows.Forms.Label();
             this.labelGFXPath = new System.Windows.Forms.Label();
             this.groupBoxLocalisation = new System.Windows.Forms.GroupBox();
+            this.labelWarningLocalisation = new System.Windows.Forms.Label();
             this.labelLocalisationPath = new System.Windows.Forms.Label();
-            this.labelWarningEvent = new System.Windows.Forms.Label();
             this.linkLabelYam = new System.Windows.Forms.LinkLabel();
             this.groupBoxPicture = new System.Windows.Forms.GroupBox();
-            this.labelPicturePath = new System.Windows.Forms.Label();
-            this.labelWarningonaction = new System.Windows.Forms.Label();
-            this.labelWarningLocalisation = new System.Windows.Forms.Label();
             this.labelWarningPicture = new System.Windows.Forms.Label();
-            this.labelWarningGFX = new System.Windows.Forms.Label();
-            this.pictureInstructionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelPicturePath = new System.Windows.Forms.Label();
+            this.fullGeneratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.creditsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.groupBoxEvent.SuspendLayout();
             this.groupBoxonaction.SuspendLayout();
@@ -80,7 +81,8 @@
             this.onactionToolStripMenuItem,
             this.gFXToolStripMenuItem,
             this.localisationToolStripMenuItem,
-            this.toolsToolStripMenuItem});
+            this.toolsToolStripMenuItem,
+            this.moreToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
             this.mainMenuStrip.Size = new System.Drawing.Size(800, 24);
@@ -99,22 +101,21 @@
             // createToolStripMenuItem
             // 
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
-            this.createToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.createToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createToolStripMenuItem.Text = "Create";
             this.createToolStripMenuItem.Click += new System.EventHandler(this.createToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // onactionToolStripMenuItem
             // 
             this.onactionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createToolStripMenuItem1,
-            this.editToolStripMenuItem1});
+            this.createToolStripMenuItem1});
             this.onactionToolStripMenuItem.Name = "onactionToolStripMenuItem";
             this.onactionToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.onactionToolStripMenuItem.Text = "on_action";
@@ -125,13 +126,6 @@
             this.createToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.createToolStripMenuItem1.Text = "Create";
             this.createToolStripMenuItem1.Click += new System.EventHandler(this.createToolStripMenuItem1_Click);
-            // 
-            // editToolStripMenuItem1
-            // 
-            this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.editToolStripMenuItem1.Text = "Edit";
-            this.editToolStripMenuItem1.Click += new System.EventHandler(this.editToolStripMenuItem1_Click);
             // 
             // gFXToolStripMenuItem
             // 
@@ -144,15 +138,14 @@
             // createGFXToolStripMenuItem
             // 
             this.createGFXToolStripMenuItem.Name = "createGFXToolStripMenuItem";
-            this.createGFXToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.createGFXToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createGFXToolStripMenuItem.Text = "Create";
             this.createGFXToolStripMenuItem.Click += new System.EventHandler(this.createGFXToolStripMenuItem_Click);
             // 
             // localisationToolStripMenuItem
             // 
             this.localisationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createLocalisationToolStripMenuItem,
-            this.editLocalisationToolStripMenuItem});
+            this.createLocalisationToolStripMenuItem});
             this.localisationToolStripMenuItem.Name = "localisationToolStripMenuItem";
             this.localisationToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.localisationToolStripMenuItem.Text = "Localisation";
@@ -164,16 +157,10 @@
             this.createLocalisationToolStripMenuItem.Text = "Create";
             this.createLocalisationToolStripMenuItem.Click += new System.EventHandler(this.createLocalisationToolStripMenuItem_Click);
             // 
-            // editLocalisationToolStripMenuItem
-            // 
-            this.editLocalisationToolStripMenuItem.Name = "editLocalisationToolStripMenuItem";
-            this.editLocalisationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editLocalisationToolStripMenuItem.Text = "Edit";
-            this.editLocalisationToolStripMenuItem.Click += new System.EventHandler(this.editLocalisationToolStripMenuItem_Click);
-            // 
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fullGeneratorToolStripMenuItem,
             this.statesToolStripMenuItem,
             this.pictureInstructionsToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
@@ -186,6 +173,13 @@
             this.statesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.statesToolStripMenuItem.Text = "State List";
             this.statesToolStripMenuItem.Click += new System.EventHandler(this.statesToolStripMenuItem_Click);
+            // 
+            // pictureInstructionsToolStripMenuItem
+            // 
+            this.pictureInstructionsToolStripMenuItem.Name = "pictureInstructionsToolStripMenuItem";
+            this.pictureInstructionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pictureInstructionsToolStripMenuItem.Text = "Picture Instructions";
+            this.pictureInstructionsToolStripMenuItem.Click += new System.EventHandler(this.pictureInstructionsToolStripMenuItem_Click);
             // 
             // labelMainTitle
             // 
@@ -248,6 +242,16 @@
             this.groupBoxEvent.TabStop = false;
             this.groupBoxEvent.Text = "Event";
             // 
+            // labelWarningEvent
+            // 
+            this.labelWarningEvent.AutoSize = true;
+            this.labelWarningEvent.ForeColor = System.Drawing.Color.Red;
+            this.labelWarningEvent.Location = new System.Drawing.Point(233, 16);
+            this.labelWarningEvent.Name = "labelWarningEvent";
+            this.labelWarningEvent.Size = new System.Drawing.Size(364, 13);
+            this.labelWarningEvent.TabIndex = 1;
+            this.labelWarningEvent.Text = "IDs are UNIQUE to each event. Do not use the same ID for multiple events.";
+            // 
             // labelEventPath
             // 
             this.labelEventPath.Location = new System.Drawing.Point(7, 16);
@@ -266,6 +270,17 @@
             this.groupBoxonaction.TabIndex = 49;
             this.groupBoxonaction.TabStop = false;
             this.groupBoxonaction.Text = "on_action";
+            // 
+            // labelWarningonaction
+            // 
+            this.labelWarningonaction.AutoSize = true;
+            this.labelWarningonaction.ForeColor = System.Drawing.Color.Red;
+            this.labelWarningonaction.Location = new System.Drawing.Point(294, 17);
+            this.labelWarningonaction.Name = "labelWarningonaction";
+            this.labelWarningonaction.Size = new System.Drawing.Size(464, 13);
+            this.labelWarningonaction.TabIndex = 2;
+            this.labelWarningonaction.Text = "Take your time to paste the code where it should be. Capital and non-capital citi" +
+    "es are separated.";
             // 
             // labelonactionPath
             // 
@@ -286,6 +301,16 @@
             this.groupBoxGFX.TabStop = false;
             this.groupBoxGFX.Text = "GFX";
             // 
+            // labelWarningGFX
+            // 
+            this.labelWarningGFX.AutoSize = true;
+            this.labelWarningGFX.ForeColor = System.Drawing.Color.Red;
+            this.labelWarningGFX.Location = new System.Drawing.Point(244, 16);
+            this.labelWarningGFX.Name = "labelWarningGFX";
+            this.labelWarningGFX.Size = new System.Drawing.Size(248, 13);
+            this.labelWarningGFX.TabIndex = 3;
+            this.labelWarningGFX.Text = "City name MUST be the same as the related event.";
+            // 
             // labelGFXPath
             // 
             this.labelGFXPath.Location = new System.Drawing.Point(7, 16);
@@ -305,6 +330,16 @@
             this.groupBoxLocalisation.TabStop = false;
             this.groupBoxLocalisation.Text = "Localisation";
             // 
+            // labelWarningLocalisation
+            // 
+            this.labelWarningLocalisation.AutoSize = true;
+            this.labelWarningLocalisation.ForeColor = System.Drawing.Color.Red;
+            this.labelWarningLocalisation.Location = new System.Drawing.Point(303, 16);
+            this.labelWarningLocalisation.Name = "labelWarningLocalisation";
+            this.labelWarningLocalisation.Size = new System.Drawing.Size(331, 13);
+            this.labelWarningLocalisation.TabIndex = 2;
+            this.labelWarningLocalisation.Text = "IDs and city names MUST be the same as the related event created.";
+            // 
             // labelLocalisationPath
             // 
             this.labelLocalisationPath.Location = new System.Drawing.Point(7, 16);
@@ -312,16 +347,6 @@
             this.labelLocalisationPath.Size = new System.Drawing.Size(290, 14);
             this.labelLocalisationPath.TabIndex = 0;
             this.labelLocalisationPath.Text = "BetterCityEvents\\localisation\\bettercityevents_l_english.yml";
-            // 
-            // labelWarningEvent
-            // 
-            this.labelWarningEvent.AutoSize = true;
-            this.labelWarningEvent.ForeColor = System.Drawing.Color.Red;
-            this.labelWarningEvent.Location = new System.Drawing.Point(233, 16);
-            this.labelWarningEvent.Name = "labelWarningEvent";
-            this.labelWarningEvent.Size = new System.Drawing.Size(364, 13);
-            this.labelWarningEvent.TabIndex = 1;
-            this.labelWarningEvent.Text = "IDs are UNIQUE to each event. Do not use the same ID for multiple events.";
             // 
             // linkLabelYam
             // 
@@ -340,68 +365,50 @@
             // 
             this.groupBoxPicture.Controls.Add(this.labelWarningPicture);
             this.groupBoxPicture.Controls.Add(this.labelPicturePath);
-            this.groupBoxPicture.Location = new System.Drawing.Point(19, 336);
+            this.groupBoxPicture.Location = new System.Drawing.Point(16, 336);
             this.groupBoxPicture.Name = "groupBoxPicture";
             this.groupBoxPicture.Size = new System.Drawing.Size(766, 37);
             this.groupBoxPicture.TabIndex = 52;
             this.groupBoxPicture.TabStop = false;
             this.groupBoxPicture.Text = "Picture";
             // 
-            // labelPicturePath
-            // 
-            this.labelPicturePath.Location = new System.Drawing.Point(7, 16);
-            this.labelPicturePath.Name = "labelPicturePath";
-            this.labelPicturePath.Size = new System.Drawing.Size(93, 14);
-            this.labelPicturePath.TabIndex = 0;
-            this.labelPicturePath.Text = "gfx\\event_pictures";
-            // 
-            // labelWarningonaction
-            // 
-            this.labelWarningonaction.AutoSize = true;
-            this.labelWarningonaction.ForeColor = System.Drawing.Color.Red;
-            this.labelWarningonaction.Location = new System.Drawing.Point(294, 17);
-            this.labelWarningonaction.Name = "labelWarningonaction";
-            this.labelWarningonaction.Size = new System.Drawing.Size(464, 13);
-            this.labelWarningonaction.TabIndex = 2;
-            this.labelWarningonaction.Text = "Take your time to paste the code where it should be. Capital and non-capital citi" +
-    "es are separated.";
-            // 
-            // labelWarningLocalisation
-            // 
-            this.labelWarningLocalisation.AutoSize = true;
-            this.labelWarningLocalisation.ForeColor = System.Drawing.Color.Red;
-            this.labelWarningLocalisation.Location = new System.Drawing.Point(303, 16);
-            this.labelWarningLocalisation.Name = "labelWarningLocalisation";
-            this.labelWarningLocalisation.Size = new System.Drawing.Size(331, 13);
-            this.labelWarningLocalisation.TabIndex = 2;
-            this.labelWarningLocalisation.Text = "IDs and city names MUST be the same as the related event created.";
-            // 
             // labelWarningPicture
             // 
             this.labelWarningPicture.AutoSize = true;
             this.labelWarningPicture.ForeColor = System.Drawing.Color.Red;
-            this.labelWarningPicture.Location = new System.Drawing.Point(106, 16);
+            this.labelWarningPicture.Location = new System.Drawing.Point(200, 16);
             this.labelWarningPicture.Name = "labelWarningPicture";
             this.labelWarningPicture.Size = new System.Drawing.Size(287, 13);
             this.labelWarningPicture.TabIndex = 3;
             this.labelWarningPicture.Text = "Instructions for creating an event picture are on the GitHub.";
             // 
-            // labelWarningGFX
+            // labelPicturePath
             // 
-            this.labelWarningGFX.AutoSize = true;
-            this.labelWarningGFX.ForeColor = System.Drawing.Color.Red;
-            this.labelWarningGFX.Location = new System.Drawing.Point(244, 16);
-            this.labelWarningGFX.Name = "labelWarningGFX";
-            this.labelWarningGFX.Size = new System.Drawing.Size(248, 13);
-            this.labelWarningGFX.TabIndex = 3;
-            this.labelWarningGFX.Text = "City name MUST be the same as the related event.";
+            this.labelPicturePath.Location = new System.Drawing.Point(7, 16);
+            this.labelPicturePath.Name = "labelPicturePath";
+            this.labelPicturePath.Size = new System.Drawing.Size(187, 14);
+            this.labelPicturePath.TabIndex = 0;
+            this.labelPicturePath.Text = "BetterCityEvents\\gfx\\event_pictures";
             // 
-            // pictureInstructionsToolStripMenuItem
+            // fullGeneratorToolStripMenuItem
             // 
-            this.pictureInstructionsToolStripMenuItem.Name = "pictureInstructionsToolStripMenuItem";
-            this.pictureInstructionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pictureInstructionsToolStripMenuItem.Text = "Picture Instructions";
-            this.pictureInstructionsToolStripMenuItem.Click += new System.EventHandler(this.pictureInstructionsToolStripMenuItem_Click);
+            this.fullGeneratorToolStripMenuItem.Name = "fullGeneratorToolStripMenuItem";
+            this.fullGeneratorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fullGeneratorToolStripMenuItem.Text = "Full Generator";
+            // 
+            // moreToolStripMenuItem
+            // 
+            this.moreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.creditsToolStripMenuItem});
+            this.moreToolStripMenuItem.Name = "moreToolStripMenuItem";
+            this.moreToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.moreToolStripMenuItem.Text = "More...";
+            // 
+            // creditsToolStripMenuItem
+            // 
+            this.creditsToolStripMenuItem.Name = "creditsToolStripMenuItem";
+            this.creditsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.creditsToolStripMenuItem.Text = "Credits";
             // 
             // FormMain
             // 
@@ -449,12 +456,10 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem onactionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem gFXToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createGFXToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem localisationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createLocalisationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editLocalisationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statesToolStripMenuItem;
         private System.Windows.Forms.Label labelMainTitle;
@@ -479,6 +484,9 @@
         private System.Windows.Forms.Label labelWarningPicture;
         private System.Windows.Forms.Label labelPicturePath;
         private System.Windows.Forms.ToolStripMenuItem pictureInstructionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fullGeneratorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem moreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem creditsToolStripMenuItem;
     }
 }
 
