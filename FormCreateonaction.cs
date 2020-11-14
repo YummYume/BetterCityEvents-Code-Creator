@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace HOI4EventGenerator
 {
@@ -157,6 +158,54 @@ namespace HOI4EventGenerator
             textBoxCityNames.Lines = newTextBoxCityNames;
             textBoxEventIDMultiple.Lines = newTextBoxEventIDMultiple;
             textBoxIDStates.Lines = newTextBoxIDStates;
+            var onactionArray = new List<Onaction>();
+            try
+            {
+                if (checkBoxMultipleonaction.Checked == false)
+                {
+                    Onaction newonaction = new Onaction(Convert.ToInt32(textBoxEventIDOne.Text), Convert.ToInt32(textBoxIDState.Text), textBoxNameCity.Text.ToLower(), checkBoxIsCapital.Checked);
+                    onactionArray.Add(newonaction);
+                }
+                else
+                {
+                    for (int i = 0; i < numericUpDownEventCount.Value; i++)
+                    {
+                        Onaction newonaction = new Onaction(Convert.ToInt32(textBoxEventIDMultiple.Lines.GetValue(i)), Convert.ToInt32(textBoxIDStates.Lines.GetValue(i)), (textBoxCityNames.Lines.GetValue(i)).ToString(), checkBoxIsCapital.Checked);
+                        onactionArray.Add(newonaction);
+                    }
+                }
+                labelGenerateStatus.ForeColor = Color.Green;
+                labelGenerateStatus.Text = "Generated successfully!";
+                buttonSaveonaction.Enabled = true;
+            }
+            catch (Exception)
+            {
+                labelGenerateStatus.ForeColor = Color.Red;
+                labelGenerateStatus.Text = "A problem occurred during the generation.";
+            }
+            finally
+            {
+                labelGenerateStatus.Visible = true;
+                var t = new Timer();
+                t.Interval = 3000; // it will Tick in 3 seconds
+                t.Tick += (s, error) =>
+                {
+                    labelGenerateStatus.Visible = false;
+                    t.Stop();
+                };
+                t.Start();
+                string showPreview = "";
+                string showPreviewCode = "";
+                foreach (Onaction onactionCreated in onactionArray)
+                {
+                    showPreview = showPreview + onactionCreated.GetCode();
+                    showPreviewCode = showPreviewCode + onactionCreated.GetCodeStateList();
+                }
+                richTextBoxPreviewCode.BackColor = Color.LightSkyBlue;
+                richTextBoxCodePreviewStateList.BackColor = Color.LightSkyBlue;
+                richTextBoxPreviewCode.Text = showPreview;
+                richTextBoxCodePreviewStateList.Text = showPreviewCode;
+            }
         }
 
         private void textBoxCityNames_KeyPress(object sender, KeyPressEventArgs e)
@@ -212,6 +261,45 @@ namespace HOI4EventGenerator
             if (e.KeyChar == 32)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void buttonSaveonaction_Click(object sender, EventArgs e)
+        {
+            MemoryStream userInput = new MemoryStream();
+            SaveFileDialog saveonaction = new SaveFileDialog();
+            richTextBoxCodePreviewStateList.SaveFile(userInput, RichTextBoxStreamType.PlainText);
+            richTextBoxPreviewCode.SaveFile(userInput, RichTextBoxStreamType.PlainText);
+            userInput.WriteByte(13);
+            saveonaction.Title = "Save on_action";
+            saveonaction.FileName = "newon_action";
+            saveonaction.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveonaction.DefaultExt = "txt";
+            saveonaction.InitialDirectory = @".\save";
+            saveonaction.CheckFileExists = false;
+            saveonaction.CheckPathExists = false;
+            saveonaction.RestoreDirectory = false;
+            saveonaction.CreatePrompt = true;
+            saveonaction.OverwritePrompt = true;
+            saveonaction.FilterIndex = 1;
+            saveonaction.RestoreDirectory = true;
+            Stream fileStream;
+            if (saveonaction.ShowDialog() == DialogResult.OK)
+            {
+                fileStream = saveonaction.OpenFile();
+                userInput.Position = 0;
+                userInput.WriteTo(fileStream);
+                fileStream.Close();
+                labelShowSavedPath.Text = "Saved to " + saveonaction.FileName;
+                labelShowSavedPath.Visible = true;
+                var t = new Timer();
+                t.Interval = 3000; // it will Tick in 3 seconds
+                t.Tick += (s, error) =>
+                {
+                    labelShowSavedPath.Visible = false;
+                    t.Stop();
+                };
+                t.Start();
             }
         }
     }

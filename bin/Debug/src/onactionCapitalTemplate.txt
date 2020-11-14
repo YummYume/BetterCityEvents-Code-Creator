@@ -39,6 +39,9 @@
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_[NAME_CITY]
 							}

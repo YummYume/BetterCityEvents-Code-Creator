@@ -31,7 +31,6 @@
             this.textBoxIDStates = new System.Windows.Forms.TextBox();
             this.labelIDState = new System.Windows.Forms.Label();
             this.textBoxIDState = new System.Windows.Forms.TextBox();
-            this.labelShowEventPathSaved = new System.Windows.Forms.Label();
             this.buttonSaveonaction = new System.Windows.Forms.Button();
             this.textBoxCityNames = new System.Windows.Forms.TextBox();
             this.labelCreateonactionTitle = new System.Windows.Forms.Label();
@@ -47,6 +46,8 @@
             this.textBoxEventIDOne = new System.Windows.Forms.TextBox();
             this.textBoxEventIDMultiple = new System.Windows.Forms.TextBox();
             this.richTextBoxCodePreviewStateList = new System.Windows.Forms.RichTextBox();
+            this.labelGenerateStatus = new System.Windows.Forms.Label();
+            this.labelShowSavedPath = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEventCount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,14 +84,6 @@
             this.textBoxIDState.Text = "1";
             this.textBoxIDState.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxIDState_KeyPress);
             // 
-            // labelShowEventPathSaved
-            // 
-            this.labelShowEventPathSaved.AutoSize = true;
-            this.labelShowEventPathSaved.Location = new System.Drawing.Point(243, 433);
-            this.labelShowEventPathSaved.Name = "labelShowEventPathSaved";
-            this.labelShowEventPathSaved.Size = new System.Drawing.Size(0, 13);
-            this.labelShowEventPathSaved.TabIndex = 60;
-            // 
             // buttonSaveonaction
             // 
             this.buttonSaveonaction.Enabled = false;
@@ -100,6 +93,7 @@
             this.buttonSaveonaction.TabIndex = 55;
             this.buttonSaveonaction.Text = "Save";
             this.buttonSaveonaction.UseVisualStyleBackColor = true;
+            this.buttonSaveonaction.Click += new System.EventHandler(this.buttonSaveonaction_Click);
             // 
             // textBoxCityNames
             // 
@@ -262,11 +256,29 @@
             this.richTextBoxCodePreviewStateList.TabIndex = 68;
             this.richTextBoxCodePreviewStateList.Text = "";
             // 
+            // labelGenerateStatus
+            // 
+            this.labelGenerateStatus.AutoSize = true;
+            this.labelGenerateStatus.Location = new System.Drawing.Point(89, 409);
+            this.labelGenerateStatus.Name = "labelGenerateStatus";
+            this.labelGenerateStatus.Size = new System.Drawing.Size(0, 13);
+            this.labelGenerateStatus.TabIndex = 69;
+            // 
+            // labelShowSavedPath
+            // 
+            this.labelShowSavedPath.AutoSize = true;
+            this.labelShowSavedPath.Location = new System.Drawing.Point(450, 408);
+            this.labelShowSavedPath.Name = "labelShowSavedPath";
+            this.labelShowSavedPath.Size = new System.Drawing.Size(0, 13);
+            this.labelShowSavedPath.TabIndex = 70;
+            // 
             // FormCreateonaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(923, 440);
+            this.Controls.Add(this.labelShowSavedPath);
+            this.Controls.Add(this.labelGenerateStatus);
             this.Controls.Add(this.richTextBoxCodePreviewStateList);
             this.Controls.Add(this.textBoxEventIDMultiple);
             this.Controls.Add(this.textBoxEventIDOne);
@@ -274,7 +286,6 @@
             this.Controls.Add(this.textBoxIDStates);
             this.Controls.Add(this.labelIDState);
             this.Controls.Add(this.textBoxIDState);
-            this.Controls.Add(this.labelShowEventPathSaved);
             this.Controls.Add(this.buttonSaveonaction);
             this.Controls.Add(this.textBoxCityNames);
             this.Controls.Add(this.labelCreateonactionTitle);
@@ -299,7 +310,6 @@
         private System.Windows.Forms.TextBox textBoxIDStates;
         private System.Windows.Forms.Label labelIDState;
         private System.Windows.Forms.TextBox textBoxIDState;
-        private System.Windows.Forms.Label labelShowEventPathSaved;
         private System.Windows.Forms.Button buttonSaveonaction;
         private System.Windows.Forms.TextBox textBoxCityNames;
         private System.Windows.Forms.Label labelCreateonactionTitle;
@@ -315,5 +325,7 @@
         private System.Windows.Forms.TextBox textBoxEventIDOne;
         private System.Windows.Forms.TextBox textBoxEventIDMultiple;
         private System.Windows.Forms.RichTextBox richTextBoxCodePreviewStateList;
+        private System.Windows.Forms.Label labelGenerateStatus;
+        private System.Windows.Forms.Label labelShowSavedPath;
     }
 }

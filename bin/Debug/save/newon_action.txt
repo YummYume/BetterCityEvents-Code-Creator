@@ -1,0 +1,463 @@
+state = 1 #Cityname1
+state = 2 #Cityname2
+state = 3 #Cityname3
+state = 4 #Cityname4
+state = 5 #Cityname5
+state = 6 #Cityname6
+				else_if = { #Cityname1
+					limit = {
+						FROM.FROM = {
+							state = 1
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_cityname1
+									has_global_flag = bettercitynews_liberation_of_cityname1
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 1
+								NOT = {
+									controls_state = 1
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 1
+								NOT = {
+									owns_state = 1
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname1_owner
+							set_global_flag = bettercitynews_fall_of_cityname1
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname1_controller
+							news_event = { id = bettercitynews.1 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_cityname1
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_cityname1
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_cityname1_controller
+								NOT = {
+									controls_state = 1
+									owns_state = 1
+									tag = event_target:bettercitynews_fall_of_cityname1_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_cityname1_owner
+								controls_state = 1
+								owns_state = 1
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_cityname1_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_cityname1
+							set_global_flag = bettercitynews_liberation_of_cityname1
+							news_event = { id = bettercitynews.2 hours = 5 }
+						}
+					}
+				}
+				else_if = { #Cityname2
+					limit = {
+						FROM.FROM = {
+							state = 2
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_cityname2
+									has_global_flag = bettercitynews_liberation_of_cityname2
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 2
+								NOT = {
+									controls_state = 2
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 2
+								NOT = {
+									owns_state = 2
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname2_owner
+							set_global_flag = bettercitynews_fall_of_cityname2
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname2_controller
+							news_event = { id = bettercitynews.2 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_cityname2
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_cityname2
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_cityname2_controller
+								NOT = {
+									controls_state = 2
+									owns_state = 2
+									tag = event_target:bettercitynews_fall_of_cityname2_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_cityname2_owner
+								controls_state = 2
+								owns_state = 2
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_cityname2_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_cityname2
+							set_global_flag = bettercitynews_liberation_of_cityname2
+							news_event = { id = bettercitynews.3 hours = 5 }
+						}
+					}
+				}
+				else_if = { #Cityname3
+					limit = {
+						FROM.FROM = {
+							state = 3
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_cityname3
+									has_global_flag = bettercitynews_liberation_of_cityname3
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 3
+								NOT = {
+									controls_state = 3
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 3
+								NOT = {
+									owns_state = 3
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname3_owner
+							set_global_flag = bettercitynews_fall_of_cityname3
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname3_controller
+							news_event = { id = bettercitynews.3 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_cityname3
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_cityname3
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_cityname3_controller
+								NOT = {
+									controls_state = 3
+									owns_state = 3
+									tag = event_target:bettercitynews_fall_of_cityname3_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_cityname3_owner
+								controls_state = 3
+								owns_state = 3
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_cityname3_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_cityname3
+							set_global_flag = bettercitynews_liberation_of_cityname3
+							news_event = { id = bettercitynews.4 hours = 5 }
+						}
+					}
+				}
+				else_if = { #Cityname4
+					limit = {
+						FROM.FROM = {
+							state = 4
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_cityname4
+									has_global_flag = bettercitynews_liberation_of_cityname4
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 4
+								NOT = {
+									controls_state = 4
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 4
+								NOT = {
+									owns_state = 4
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname4_owner
+							set_global_flag = bettercitynews_fall_of_cityname4
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname4_controller
+							news_event = { id = bettercitynews.4 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_cityname4
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_cityname4
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_cityname4_controller
+								NOT = {
+									controls_state = 4
+									owns_state = 4
+									tag = event_target:bettercitynews_fall_of_cityname4_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_cityname4_owner
+								controls_state = 4
+								owns_state = 4
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_cityname4_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_cityname4
+							set_global_flag = bettercitynews_liberation_of_cityname4
+							news_event = { id = bettercitynews.5 hours = 5 }
+						}
+					}
+				}
+				else_if = { #Cityname5
+					limit = {
+						FROM.FROM = {
+							state = 5
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_cityname5
+									has_global_flag = bettercitynews_liberation_of_cityname5
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 5
+								NOT = {
+									controls_state = 5
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 5
+								NOT = {
+									owns_state = 5
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname5_owner
+							set_global_flag = bettercitynews_fall_of_cityname5
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname5_controller
+							news_event = { id = bettercitynews.5 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_cityname5
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_cityname5
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_cityname5_controller
+								NOT = {
+									controls_state = 5
+									owns_state = 5
+									tag = event_target:bettercitynews_fall_of_cityname5_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_cityname5_owner
+								controls_state = 5
+								owns_state = 5
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_cityname5_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_cityname5
+							set_global_flag = bettercitynews_liberation_of_cityname5
+							news_event = { id = bettercitynews.6 hours = 5 }
+						}
+					}
+				}
+				else_if = { #Cityname6
+					limit = {
+						FROM.FROM = {
+							state = 6
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_cityname6
+									has_global_flag = bettercitynews_liberation_of_cityname6
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 6
+								NOT = {
+									controls_state = 6
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 6
+								NOT = {
+									owns_state = 6
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname6_owner
+							set_global_flag = bettercitynews_fall_of_cityname6
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname6_controller
+							news_event = { id = bettercitynews.6 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_cityname6
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_cityname6
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_cityname6_controller
+								NOT = {
+									controls_state = 6
+									owns_state = 6
+									tag = event_target:bettercitynews_fall_of_cityname6_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_cityname6_owner
+								controls_state = 6
+								owns_state = 6
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_cityname6_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_cityname6
+							set_global_flag = bettercitynews_liberation_of_cityname6
+							news_event = { id = bettercitynews.7 hours = 5 }
+						}
+					}
+				}
+
