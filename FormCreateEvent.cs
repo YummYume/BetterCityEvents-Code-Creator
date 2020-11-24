@@ -141,7 +141,7 @@ namespace HOI4EventGenerator
             richTextBoxPreviewCode.SaveFile(userInput, RichTextBoxStreamType.PlainText);
             userInput.WriteByte(13);
             saveEvent.Title = "Save event";
-            saveEvent.FileName = "newBetterCityEvent";
+            saveEvent.FileName = "newEvent";
             saveEvent.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             saveEvent.DefaultExt = "txt";
             saveEvent.InitialDirectory = @".\save";

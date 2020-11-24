@@ -22,5 +22,10 @@ namespace HOI4EventGenerator
 
             return name.ToUpper();
         }
+
+        public static string UnderscoreToSpace(string text)
+        {
+            return text.Replace("_", " ");
+        }
     }
 }

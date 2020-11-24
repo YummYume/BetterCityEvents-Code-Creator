@@ -71,5 +71,12 @@ namespace HOI4EventGenerator
             newPictureInstructions = new FormGitHubPictureInstructions();
             newPictureInstructions.Show();
         }
+
+        private void fullGeneratorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormFullGenerator newFullGenerator;
+            newFullGenerator = new FormFullGenerator();
+            newFullGenerator.Show();
+        }
     }
 }

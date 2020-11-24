@@ -30,7 +30,7 @@ namespace HOI4EventGenerator
                 code = code.Replace("[ID_EVENT]", this.id.ToString());
                 code = code.Replace("[ID_EVENT_LIB]", (this.id + 1).ToString());
                 code = code.Replace("[NAME_EVENT]", this.name);
-                code = code.Replace("[NAME_EVENT_CAP]", Utilities.ToCapName(this.name));
+                code = code.Replace("[NAME_EVENT_CAP]", Utilities.UnderscoreToSpace(Utilities.ToCapName(this.name)));
             }
             catch (FileNotFoundException)
             {

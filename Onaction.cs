@@ -38,7 +38,7 @@ namespace HOI4EventGenerator
                 code = code.Replace("[ID_EVENT_LIB]", (this.id + 1).ToString());
                 code = code.Replace("[ID_STATE]", this.state.ToString());
                 code = code.Replace("[NAME_CITY]", this.name);
-                code = code.Replace("[NAME_CITY_CAP]", Utilities.ToCapName(this.name));
+                code = code.Replace("[NAME_CITY_CAP]", Utilities.UnderscoreToSpace(Utilities.ToCapName(this.name)));
 
                 StreamReader stateList = new StreamReader(@".\src\onactionStateListTemplate.txt");
                 codeStateList = stateList.ReadToEnd() + "\n";

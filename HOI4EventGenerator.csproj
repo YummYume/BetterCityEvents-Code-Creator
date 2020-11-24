@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormFullGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFullGenerator.Designer.cs">
+      <DependentUpon>FormFullGenerator.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGitHubPictureInstructions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,7 @@
     <Compile Include="FormStateList.Designer.cs">
       <DependentUpon>FormStateList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FullGeneration.cs" />
     <Compile Include="GFX.cs" />
     <Compile Include="Localisation.cs" />
     <Compile Include="Event.cs" />
@@ -115,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateonaction.resx">
       <DependentUpon>FormCreateonaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFullGenerator.resx">
+      <DependentUpon>FormFullGenerator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGitHubPictureInstructions.resx">
       <DependentUpon>FormGitHubPictureInstructions.cs</DependentUpon>
