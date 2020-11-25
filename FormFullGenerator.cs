@@ -16,6 +16,7 @@ namespace HOI4EventGenerator
         public FormFullGenerator()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void checkBoxMultipleGeneration_CheckedChanged(object sender, EventArgs e)
@@ -213,7 +214,11 @@ namespace HOI4EventGenerator
             textBoxCityNameMultiple.Lines = newTextBoxCityNames;
             textBoxEventIDMultiple.Lines = newTextBoxEventIDMultiple;
             textBoxStateIDMultiple.Lines = newTextBoxIDStates;
-            var fullGeneratorArray = new List<FullGeneration>();
+            var generationArray = new List<FullGeneration>();
+            var eventArray = new List<string>();
+            var onactionArray = new List<string>();
+            var gfxArray = new List<string>();
+            var localisationArray = new List<string>();
             try
             {
                 if (checkBoxMultipleGeneration.Checked == false)
@@ -222,8 +227,10 @@ namespace HOI4EventGenerator
                     Onaction newonaction = new Onaction(Convert.ToInt32(textBoxEventID.Text), Convert.ToInt32(textBoxStateID.Text), textBoxCityName.Text.ToLower(), checkBoxLiberation.Checked);
                     GFX newgfx = new GFX(textBoxCityName.Text, checkBoxLiberation.Checked);
                     Localisation newLocalisation = new Localisation(Convert.ToInt32(textBoxEventID.Text), Convert.ToInt32(textBoxStateID.Text), textBoxCityName.Text, checkBoxLiberation.Checked);
-                    FullGeneration newGeneration = new FullGeneration(newEvent, newonaction, newgfx, newLocalisation);
-                    fullGeneratorArray.Add(newGeneration);
+                    eventArray.Add(newEvent.GetCode());
+                    onactionArray.Add(newonaction.GetCode());
+                    gfxArray.Add(newgfx.GetCode());
+                    localisationArray.Add(newLocalisation.GetCode());
                 }
                 else
                 {
@@ -233,16 +240,42 @@ namespace HOI4EventGenerator
                         Onaction newonaction = new Onaction(Convert.ToInt32(textBoxEventIDMultiple.Lines.GetValue(i)), Convert.ToInt32(textBoxStateIDMultiple.Lines.GetValue(i)), textBoxCityNameMultiple.Lines.GetValue(i).ToString(), checkBoxLiberation.Checked);
                         GFX newgfx = new GFX(textBoxCityNameMultiple.Lines.GetValue(i).ToString(), checkBoxLiberation.Checked);
                         Localisation newLocalisation = new Localisation(Convert.ToInt32(textBoxEventIDMultiple.Lines.GetValue(i)), Convert.ToInt32(textBoxStateIDMultiple.Lines.GetValue(i)), textBoxCityNameMultiple.Lines.GetValue(i).ToString(), checkBoxLiberation.Checked);
-                        FullGeneration newGeneration = new FullGeneration(newEvent, newonaction, newgfx, newLocalisation);
-                        fullGeneratorArray.Add(newGeneration);
+                        eventArray.Add(newEvent.GetCode());
+                        onactionArray.Add(newonaction.GetCode());
+                        gfxArray.Add(newgfx.GetCode());
+                        localisationArray.Add(newLocalisation.GetCode());
                     }
                 }
+                string fullEventCode = "";
+                string fullonactionCode = "";
+                string fullGFXCode = "";
+                string fullLocalisationCode = "";
+                eventArray.ForEach(delegate(string code)
+                {
+                    fullEventCode += code;
+                });
+                onactionArray.ForEach(delegate (string code)
+                {
+                    fullonactionCode += code;
+                });
+                gfxArray.ForEach(delegate (string code)
+                {
+                    fullGFXCode += code;
+                });
+                localisationArray.ForEach(delegate (string code)
+                {
+                    fullLocalisationCode += code;
+                });
+                FullGeneration newGeneration = new FullGeneration(fullEventCode, fullonactionCode, fullGFXCode, fullLocalisationCode);
+                generationArray.Add(newGeneration);
                 labelGenerationStatus.ForeColor = Color.Green;
                 labelGenerationStatus.Text = "Generated successfully!";
                 labelGenerationStatus.Enabled = true;
             }
             catch (Exception)
             {
+                FullGeneration newGeneration = new FullGeneration("", "", "", "");
+                generationArray.Add(newGeneration);
                 labelGenerationStatus.ForeColor = Color.Red;
                 labelGenerationStatus.Text = "A problem occurred during the generation.";
             }
@@ -257,11 +290,8 @@ namespace HOI4EventGenerator
                     t.Stop();
                 };
                 t.Start();
-                string showPreview = "";
-                foreach (FullGeneration generationCreated in fullGeneratorArray)
-                {
-                    showPreview = showPreview + generationCreated.GetCode();
-                }
+                FullGeneration generationPreview = generationArray.First<FullGeneration>();
+                string showPreview = generationPreview.GetFullCode();
                 richTextBoxPreviewCode.BackColor = Color.LightSkyBlue;
                 richTextBoxPreviewCode.Text = showPreview;
             }
