@@ -244,6 +244,7 @@
             // 
             // buttonSaveCode
             // 
+            this.buttonSaveCode.Enabled = false;
             this.buttonSaveCode.Location = new System.Drawing.Point(672, 500);
             this.buttonSaveCode.Name = "buttonSaveCode";
             this.buttonSaveCode.Size = new System.Drawing.Size(75, 23);

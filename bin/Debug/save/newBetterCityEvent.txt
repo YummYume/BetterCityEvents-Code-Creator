@@ -1,38 +1,39 @@
-# The Fall of Warsaw
+#Event
+# The Fall of Cityname1
 news_event = {
-	id = bettercitynews.2
-	title = bettercitynews.2.t
-	desc = bettercitynews.2.d
-	picture = GFX_bettercityevents_fall_warsaw
+	id = bettercitynews.1
+	title = bettercitynews.1.t
+	desc = bettercitynews.1.d
+	picture = GFX_bettercityevents_fall_cityname1
 	
 	major = yes
 	
 	is_triggered_only = yes
 	
 	option = { #CURRENT OWNER
-		name = bettercitynews.2.a
+		name = bettercitynews.1.a
 		trigger = {
-			tag = event_target:bettercitynews_fall_of_warsaw_owner
+			tag = event_target:bettercitynews_fall_of_cityname1_owner
             NOT = {
-                tag = event_target:bettercitynews_fall_of_warsaw_controller
+                tag = event_target:bettercitynews_fall_of_cityname1_controller
             }
 		}
 	}
 	option = { #CURRENT CONTROLLER
-		name = bettercitynews.2.b
+		name = bettercitynews.1.b
 		trigger = {
-            tag = event_target:bettercitynews_fall_of_warsaw_controller
+            tag = event_target:bettercitynews_fall_of_cityname1_controller
             NOT = {
-                tag = event_target:bettercitynews_fall_of_warsaw_owner
+                tag = event_target:bettercitynews_fall_of_cityname1_owner
             }
         }
 	}
 	option = { #NOT OWNER NOR CONTROLLER
-		name = bettercitynews.2.c
+		name = bettercitynews.1.c
 		trigger = {
             NOT = {
-            tag = event_target:bettercitynews_fall_of_warsaw_owner
-				tag = event_target:bettercitynews_fall_of_warsaw_controller
+            tag = event_target:bettercitynews_fall_of_cityname1_owner
+				tag = event_target:bettercitynews_fall_of_cityname1_controller
             }
         }
 	}
@@ -40,94 +41,12 @@ news_event = {
 
 
 
-# The Liberation of Warsaw
+# The Liberation of Cityname1
 news_event = {
 	id = bettercitynews.2
 	title = bettercitynews.2.t
 	desc = bettercitynews.2.d
-	picture = GFX_bettercityevents_liberation_warsaw
-	
-	major = yes
-
-	is_triggered_only = yes
-	
-	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
-		name = bettercitynews.2.a
-		trigger = {
-			tag = event_target:bettercitynews_fall_of_warsaw_controller
-           	NOT = {
-                tag = event_target:bettercitynews_fall_of_warsaw_owner
-            }
-		}
-	}
-	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
-		name = bettercitynews.2.b
-		trigger = {
-            tag = event_target:bettercitynews_fall_of_warsaw_owner
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_warsaw_controller
-            }
-        }
-	}
-	option = { #NOT OWNER NOR OLD CONTROLLER
-		name = bettercitynews.2.c
-		trigger = {
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_warsaw_owner
-				tag = event_target:bettercitynews_fall_of_warsaw_controller
-            }
-        }
-	}
-}
-
-# The Fall of Paris
-news_event = {
-	id = bettercitynews.2
-	title = bettercitynews.2.t
-	desc = bettercitynews.2.d
-	picture = GFX_bettercityevents_fall_paris
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = { #CURRENT OWNER
-		name = bettercitynews.2.a
-		trigger = {
-			tag = event_target:bettercitynews_fall_of_paris_owner
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_paris_controller
-            }
-		}
-	}
-	option = { #CURRENT CONTROLLER
-		name = bettercitynews.2.b
-		trigger = {
-            tag = event_target:bettercitynews_fall_of_paris_controller
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_paris_owner
-            }
-        }
-	}
-	option = { #NOT OWNER NOR CONTROLLER
-		name = bettercitynews.2.c
-		trigger = {
-            NOT = {
-            tag = event_target:bettercitynews_fall_of_paris_owner
-				tag = event_target:bettercitynews_fall_of_paris_controller
-            }
-        }
-	}
-}
-
-
-
-# The Liberation of Paris
-news_event = {
-	id = bettercitynews.2
-	title = bettercitynews.2.t
-	desc = bettercitynews.2.d
-	picture = GFX_bettercityevents_liberation_paris
+	picture = GFX_bettercityevents_liberation_cityname1
 	
 	major = yes
 
@@ -136,18 +55,18 @@ news_event = {
 	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.2.a
 		trigger = {
-			tag = event_target:bettercitynews_fall_of_paris_controller
+			tag = event_target:bettercitynews_fall_of_cityname1_controller
            	NOT = {
-                tag = event_target:bettercitynews_fall_of_paris_owner
+                tag = event_target:bettercitynews_fall_of_cityname1_owner
             }
 		}
 	}
 	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
 		name = bettercitynews.2.b
 		trigger = {
-            tag = event_target:bettercitynews_fall_of_paris_owner
+            tag = event_target:bettercitynews_fall_of_cityname1_owner
             NOT = {
-                tag = event_target:bettercitynews_fall_of_paris_controller
+                tag = event_target:bettercitynews_fall_of_cityname1_controller
             }
         }
 	}
@@ -155,260 +74,113 @@ news_event = {
 		name = bettercitynews.2.c
 		trigger = {
             NOT = {
-                tag = event_target:bettercitynews_fall_of_paris_owner
-				tag = event_target:bettercitynews_fall_of_paris_controller
-            }
-        }
-	}
-}
-
-# The Fall of London
-news_event = {
-	id = bettercitynews.3
-	title = bettercitynews.3.t
-	desc = bettercitynews.3.d
-	picture = GFX_bettercityevents_fall_london
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = { #CURRENT OWNER
-		name = bettercitynews.3.a
-		trigger = {
-			tag = event_target:bettercitynews_fall_of_london_owner
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_london_controller
-            }
-		}
-	}
-	option = { #CURRENT CONTROLLER
-		name = bettercitynews.3.b
-		trigger = {
-            tag = event_target:bettercitynews_fall_of_london_controller
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_london_owner
-            }
-        }
-	}
-	option = { #NOT OWNER NOR CONTROLLER
-		name = bettercitynews.3.c
-		trigger = {
-            NOT = {
-            tag = event_target:bettercitynews_fall_of_london_owner
-				tag = event_target:bettercitynews_fall_of_london_controller
+                tag = event_target:bettercitynews_fall_of_cityname1_owner
+				tag = event_target:bettercitynews_fall_of_cityname1_controller
             }
         }
 	}
 }
 
 
+#onaction
+				else_if = { #Cityname1
+					limit = {
+						FROM.FROM = {
+							state = 1
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_cityname1
+									has_global_flag = bettercitynews_liberation_of_cityname1
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 1
+								NOT = {
+									controls_state = 1
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 1
+								NOT = {
+									owns_state = 1
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname1_owner
+							set_global_flag = bettercitynews_fall_of_cityname1
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_cityname1_controller
+							news_event = { id = bettercitynews.1 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_cityname1
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_cityname1
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_cityname1_controller
+								NOT = {
+									controls_state = 1
+									owns_state = 1
+									tag = event_target:bettercitynews_fall_of_cityname1_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_cityname1_owner
+								controls_state = 1
+								owns_state = 1
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_cityname1_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_cityname1
+							set_global_flag = bettercitynews_liberation_of_cityname1
+							news_event = { id = bettercitynews.2 hours = 5 }
+						}
+					}
+				}
 
-# The Liberation of London
-news_event = {
-	id = bettercitynews.3
-	title = bettercitynews.3.t
-	desc = bettercitynews.3.d
-	picture = GFX_bettercityevents_liberation_london
-	
-	major = yes
-
-	is_triggered_only = yes
-	
-	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
-		name = bettercitynews.3.a
-		trigger = {
-			tag = event_target:bettercitynews_fall_of_london_controller
-           	NOT = {
-                tag = event_target:bettercitynews_fall_of_london_owner
-            }
-		}
+#GFX
+	spriteType = {
+		name = "GFX_bettercityevents_capture_cityname1" #Name of the file you use in the code (picture = GFX_bettercityevents_...)
+		texturefile = "gfx/event_pictures/bettercityevents_capture_cityname1.dds" #Name of your file (please rename it that way)
 	}
-	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
-		name = bettercitynews.3.b
-		trigger = {
-            tag = event_target:bettercitynews_fall_of_london_owner
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_london_controller
-            }
-        }
-	}
-	option = { #NOT OWNER NOR OLD CONTROLLER
-		name = bettercitynews.3.c
-		trigger = {
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_london_owner
-				tag = event_target:bettercitynews_fall_of_london_controller
-            }
-        }
-	}
-}
 
-# The Fall of Berlin
-news_event = {
-	id = bettercitynews.4
-	title = bettercitynews.4.t
-	desc = bettercitynews.4.d
-	picture = GFX_bettercityevents_fall_berlin
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = { #CURRENT OWNER
-		name = bettercitynews.4.a
-		trigger = {
-			tag = event_target:bettercitynews_fall_of_berlin_owner
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_berlin_controller
-            }
-		}
+	spriteType = {
+		name = "GFX_bettercityevents_liberation_cityname1" #Name of the file you use in the code (picture = GFX_bettercityevents_...)
+		texturefile = "gfx/event_pictures/bettercityevents_liberation_cityname1.dds" #Name of your file (please rename it that way)
 	}
-	option = { #CURRENT CONTROLLER
-		name = bettercitynews.4.b
-		trigger = {
-            tag = event_target:bettercitynews_fall_of_berlin_controller
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_berlin_owner
-            }
-        }
-	}
-	option = { #NOT OWNER NOR CONTROLLER
-		name = bettercitynews.4.c
-		trigger = {
-            NOT = {
-            tag = event_target:bettercitynews_fall_of_berlin_owner
-				tag = event_target:bettercitynews_fall_of_berlin_controller
-            }
-        }
-	}
-}
 
 
-
-# The Liberation of Berlin
-news_event = {
-	id = bettercitynews.4
-	title = bettercitynews.4.t
-	desc = bettercitynews.4.d
-	picture = GFX_bettercityevents_liberation_berlin
-	
-	major = yes
-
-	is_triggered_only = yes
-	
-	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
-		name = bettercitynews.4.a
-		trigger = {
-			tag = event_target:bettercitynews_fall_of_berlin_controller
-           	NOT = {
-                tag = event_target:bettercitynews_fall_of_berlin_owner
-            }
-		}
-	}
-	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
-		name = bettercitynews.4.b
-		trigger = {
-            tag = event_target:bettercitynews_fall_of_berlin_owner
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_berlin_controller
-            }
-        }
-	}
-	option = { #NOT OWNER NOR OLD CONTROLLER
-		name = bettercitynews.4.c
-		trigger = {
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_berlin_owner
-				tag = event_target:bettercitynews_fall_of_berlin_controller
-            }
-        }
-	}
-}
-
-# The Fall of Moscow
-news_event = {
-	id = bettercitynews.5
-	title = bettercitynews.5.t
-	desc = bettercitynews.5.d
-	picture = GFX_bettercityevents_fall_moscow
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = { #CURRENT OWNER
-		name = bettercitynews.5.a
-		trigger = {
-			tag = event_target:bettercitynews_fall_of_moscow_owner
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_moscow_controller
-            }
-		}
-	}
-	option = { #CURRENT CONTROLLER
-		name = bettercitynews.5.b
-		trigger = {
-            tag = event_target:bettercitynews_fall_of_moscow_controller
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_moscow_owner
-            }
-        }
-	}
-	option = { #NOT OWNER NOR CONTROLLER
-		name = bettercitynews.5.c
-		trigger = {
-            NOT = {
-            tag = event_target:bettercitynews_fall_of_moscow_owner
-				tag = event_target:bettercitynews_fall_of_moscow_controller
-            }
-        }
-	}
-}
-
-
-
-# The Liberation of Moscow
-news_event = {
-	id = bettercitynews.5
-	title = bettercitynews.5.t
-	desc = bettercitynews.5.d
-	picture = GFX_bettercityevents_liberation_moscow
-	
-	major = yes
-
-	is_triggered_only = yes
-	
-	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
-		name = bettercitynews.5.a
-		trigger = {
-			tag = event_target:bettercitynews_fall_of_moscow_controller
-           	NOT = {
-                tag = event_target:bettercitynews_fall_of_moscow_owner
-            }
-		}
-	}
-	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
-		name = bettercitynews.5.b
-		trigger = {
-            tag = event_target:bettercitynews_fall_of_moscow_owner
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_moscow_controller
-            }
-        }
-	}
-	option = { #NOT OWNER NOR OLD CONTROLLER
-		name = bettercitynews.5.c
-		trigger = {
-            NOT = {
-                tag = event_target:bettercitynews_fall_of_moscow_owner
-				tag = event_target:bettercitynews_fall_of_moscow_controller
-            }
-        }
-	}
-}
-
-
-
-
+#Localisation
+bettercitynews.1.t:0 "The Fall of Cityname1"
+bettercitynews.1.d:0 "Cityname1 has fallen to [bettercitynews_fall_of_cityname1_controller.GetAdjective] forces."
+bettercitynews.1.a:0 "Damn..."
+bettercitynews.1.b:0 "[1.GetName] is ours!"
+bettercitynews.1.c:0 "Impressive."
+bettercitynews.2.t:0 "The Liberation of Cityname1"
+bettercitynews.2.d:0 "Cityname1 has been liberated by [bettercitynews_fall_of_cityname1_owner.GetAdjective] forces, driving the [bettercitynews_fall_of_cityname1_controller.GetAdjective] troops out of the city."
+bettercitynews.2.a:0 "Damn..."
+bettercitynews.2.b:0 "[1.GetName] is liberated!"
+bettercitynews.2.c:0 "Good news."
 

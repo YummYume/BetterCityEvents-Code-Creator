@@ -225,11 +225,21 @@ namespace HOI4EventGenerator
                 {
                     Event newEvent = new Event(Convert.ToInt32(textBoxEventID.Text), textBoxCityName.Text, checkBoxLiberation.Checked);
                     Onaction newonaction = new Onaction(Convert.ToInt32(textBoxEventID.Text), Convert.ToInt32(textBoxStateID.Text), textBoxCityName.Text.ToLower(), checkBoxLiberation.Checked);
-                    GFX newgfx = new GFX(textBoxCityName.Text, checkBoxLiberation.Checked);
+                    if (checkBoxLiberation.Checked == true)
+                    {
+                        GFX newgfxCapture = new GFX(textBoxCityName.Text, true);
+                        GFX newgfxLib = new GFX(textBoxCityName.Text, false);
+                        gfxArray.Add(newgfxCapture.GetCode());
+                        gfxArray.Add(newgfxLib.GetCode());
+                    }
+                    else
+                    {
+                        GFX newgfxCapture = new GFX(textBoxCityName.Text, true);
+                        gfxArray.Add(newgfxCapture.GetCode());
+                    }
                     Localisation newLocalisation = new Localisation(Convert.ToInt32(textBoxEventID.Text), Convert.ToInt32(textBoxStateID.Text), textBoxCityName.Text, checkBoxLiberation.Checked);
                     eventArray.Add(newEvent.GetCode());
                     onactionArray.Add(newonaction.GetCode());
-                    gfxArray.Add(newgfx.GetCode());
                     localisationArray.Add(newLocalisation.GetCode());
                 }
                 else
@@ -238,11 +248,21 @@ namespace HOI4EventGenerator
                     {
                         Event newEvent = new Event(Convert.ToInt32(textBoxEventIDMultiple.Lines.GetValue(i)), textBoxCityNameMultiple.Lines.GetValue(i).ToString(), checkBoxLiberation.Checked);
                         Onaction newonaction = new Onaction(Convert.ToInt32(textBoxEventIDMultiple.Lines.GetValue(i)), Convert.ToInt32(textBoxStateIDMultiple.Lines.GetValue(i)), textBoxCityNameMultiple.Lines.GetValue(i).ToString(), checkBoxLiberation.Checked);
-                        GFX newgfx = new GFX(textBoxCityNameMultiple.Lines.GetValue(i).ToString(), checkBoxLiberation.Checked);
+                        if (checkBoxLiberation.Checked == true)
+                        {
+                            GFX newgfxCapture = new GFX(textBoxCityNameMultiple.Lines.GetValue(i).ToString(), true);
+                            GFX newgfxLib = new GFX(textBoxCityNameMultiple.Lines.GetValue(i).ToString(), false);
+                            gfxArray.Add(newgfxCapture.GetCode());
+                            gfxArray.Add(newgfxLib.GetCode());
+                        }
+                        else
+                        {
+                            GFX newgfxCapture = new GFX(textBoxCityNameMultiple.Lines.GetValue(i).ToString(), true);
+                            gfxArray.Add(newgfxCapture.GetCode());
+                        }
                         Localisation newLocalisation = new Localisation(Convert.ToInt32(textBoxEventIDMultiple.Lines.GetValue(i)), Convert.ToInt32(textBoxStateIDMultiple.Lines.GetValue(i)), textBoxCityNameMultiple.Lines.GetValue(i).ToString(), checkBoxLiberation.Checked);
                         eventArray.Add(newEvent.GetCode());
                         onactionArray.Add(newonaction.GetCode());
-                        gfxArray.Add(newgfx.GetCode());
                         localisationArray.Add(newLocalisation.GetCode());
                     }
                 }
@@ -271,6 +291,7 @@ namespace HOI4EventGenerator
                 labelGenerationStatus.ForeColor = Color.Green;
                 labelGenerationStatus.Text = "Generated successfully!";
                 labelGenerationStatus.Enabled = true;
+                buttonSaveCode.Enabled = true;
             }
             catch (Exception)
             {
