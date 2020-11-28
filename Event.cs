@@ -21,11 +21,11 @@ namespace HOI4EventGenerator
             try
             {
                 StreamReader eventCapture = new StreamReader(@".\src\EventCaptureTemplate.txt");
-                code = eventCapture.ReadToEnd() + "\n\n";
+                code = eventCapture.ReadToEnd() + "\n";
                 if (liberation == true)
                 {
                     StreamReader eventLiberation = new StreamReader(@".\src\EventLiberationTemplate.txt");
-                    code = code + "\n\n" + eventLiberation.ReadToEnd() + "\n\n";
+                    code = code + "\n" + eventLiberation.ReadToEnd() + "\n\n";
                 }
                 code = code.Replace("[ID_EVENT]", this.id.ToString());
                 code = code.Replace("[ID_EVENT_LIB]", (this.id + 1).ToString());

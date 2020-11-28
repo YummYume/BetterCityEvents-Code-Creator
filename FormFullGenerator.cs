@@ -217,6 +217,7 @@ namespace HOI4EventGenerator
             var generationArray = new List<FullGeneration>();
             var eventArray = new List<string>();
             var onactionArray = new List<string>();
+            var statesArray = new List<string>();
             var gfxArray = new List<string>();
             var localisationArray = new List<string>();
             try
@@ -240,6 +241,7 @@ namespace HOI4EventGenerator
                     Localisation newLocalisation = new Localisation(Convert.ToInt32(textBoxEventID.Text), Convert.ToInt32(textBoxStateID.Text), textBoxCityName.Text, checkBoxLiberation.Checked);
                     eventArray.Add(newEvent.GetCode());
                     onactionArray.Add(newonaction.GetCode());
+                    statesArray.Add(newonaction.GetCodeStateList());
                     localisationArray.Add(newLocalisation.GetCode());
                 }
                 else
@@ -263,6 +265,7 @@ namespace HOI4EventGenerator
                         Localisation newLocalisation = new Localisation(Convert.ToInt32(textBoxEventIDMultiple.Lines.GetValue(i)), Convert.ToInt32(textBoxStateIDMultiple.Lines.GetValue(i)), textBoxCityNameMultiple.Lines.GetValue(i).ToString(), checkBoxLiberation.Checked);
                         eventArray.Add(newEvent.GetCode());
                         onactionArray.Add(newonaction.GetCode());
+                        statesArray.Add(newonaction.GetCodeStateList());
                         localisationArray.Add(newLocalisation.GetCode());
                     }
                 }
@@ -274,6 +277,11 @@ namespace HOI4EventGenerator
                 {
                     fullEventCode += code;
                 });
+                statesArray.ForEach(delegate (string code)
+                {
+                    fullonactionCode += code;
+                });
+                fullonactionCode += "\n";
                 onactionArray.ForEach(delegate (string code)
                 {
                     fullonactionCode += code;

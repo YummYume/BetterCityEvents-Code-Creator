@@ -9,7 +9,6 @@
 							}
 						}
 						FROM = {
-							has_war_with = ROOT
 							owns_state = [ID_STATE]
 							NOT = {
 								controls_state = [ID_STATE]
@@ -17,7 +16,6 @@
 							}
 						}
 						ROOT = {
-							has_war_with = FROM
 							controls_state = [ID_STATE]
 							NOT = {
 								owns_state = [ID_STATE]
