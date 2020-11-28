@@ -170,21 +170,21 @@
             // fullGeneratorToolStripMenuItem
             // 
             this.fullGeneratorToolStripMenuItem.Name = "fullGeneratorToolStripMenuItem";
-            this.fullGeneratorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fullGeneratorToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.fullGeneratorToolStripMenuItem.Text = "Full Generator";
             this.fullGeneratorToolStripMenuItem.Click += new System.EventHandler(this.fullGeneratorToolStripMenuItem_Click);
             // 
             // statesToolStripMenuItem
             // 
             this.statesToolStripMenuItem.Name = "statesToolStripMenuItem";
-            this.statesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.statesToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.statesToolStripMenuItem.Text = "State List";
             this.statesToolStripMenuItem.Click += new System.EventHandler(this.statesToolStripMenuItem_Click);
             // 
             // pictureInstructionsToolStripMenuItem
             // 
             this.pictureInstructionsToolStripMenuItem.Name = "pictureInstructionsToolStripMenuItem";
-            this.pictureInstructionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pictureInstructionsToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.pictureInstructionsToolStripMenuItem.Text = "Picture Instructions";
             this.pictureInstructionsToolStripMenuItem.Click += new System.EventHandler(this.pictureInstructionsToolStripMenuItem_Click);
             // 
@@ -199,7 +199,7 @@
             // creditsToolStripMenuItem
             // 
             this.creditsToolStripMenuItem.Name = "creditsToolStripMenuItem";
-            this.creditsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.creditsToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.creditsToolStripMenuItem.Text = "Credits";
             // 
             // labelMainTitle
@@ -429,8 +429,12 @@
             this.Controls.Add(this.labelMainTitle);
             this.Controls.Add(this.mainMenuStrip);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenuStrip;
+            this.MaximizeBox = false;
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOI4 Event Generator";
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();

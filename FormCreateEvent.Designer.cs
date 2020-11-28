@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateEvent));
             this.buttonGenerateEventCode = new System.Windows.Forms.Button();
             this.richTextBoxPreviewCode = new System.Windows.Forms.RichTextBox();
             this.textBoxNameCity = new System.Windows.Forms.TextBox();
@@ -244,7 +245,11 @@
             this.Controls.Add(this.numericUpDownEventCount);
             this.Controls.Add(this.checkBoxMultipleEvents);
             this.Controls.Add(this.checkBoxLiberationEvent);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormCreateEvent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Event";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIDEvent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEventCount)).EndInit();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateGFX));
             this.labelCreateGFXTitle = new System.Windows.Forms.Label();
             this.labelShowGFXPathSaved = new System.Windows.Forms.Label();
             this.buttonSaveGFX = new System.Windows.Forms.Button();
@@ -152,7 +153,11 @@
             this.Controls.Add(this.buttonSaveGFX);
             this.Controls.Add(this.richTextBoxPreviewCode);
             this.Controls.Add(this.labelCreateGFXTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormCreateGFX";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create GFX";
             this.ResumeLayout(false);
             this.PerformLayout();

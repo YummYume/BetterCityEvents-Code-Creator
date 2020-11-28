@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFullGenerator));
             this.textBoxCityName = new System.Windows.Forms.TextBox();
             this.textBoxEventID = new System.Windows.Forms.TextBox();
             this.textBoxStateID = new System.Windows.Forms.TextBox();
@@ -286,8 +287,12 @@
             this.Controls.Add(this.textBoxStateID);
             this.Controls.Add(this.textBoxEventID);
             this.Controls.Add(this.textBoxCityName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormFullGenerator";
-            this.Text = "FormFullGenerator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Full Generator";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberGenerations)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

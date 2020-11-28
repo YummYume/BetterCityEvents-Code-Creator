@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateonaction));
             this.textBoxIDStates = new System.Windows.Forms.TextBox();
             this.labelIDState = new System.Windows.Forms.Label();
             this.textBoxIDState = new System.Windows.Forms.TextBox();
@@ -297,8 +298,12 @@
             this.Controls.Add(this.numericUpDownEventCount);
             this.Controls.Add(this.checkBoxMultipleonaction);
             this.Controls.Add(this.checkBoxIsCapital);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormCreateonaction";
-            this.Text = "FormEditonaction";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Create on_action";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEventCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

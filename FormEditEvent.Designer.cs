@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditEvent));
             this.buttonSaveEvent = new System.Windows.Forms.Button();
             this.labelEditEventTitle = new System.Windows.Forms.Label();
             this.richTextBoxPreviewCode = new System.Windows.Forms.RichTextBox();
@@ -340,7 +341,11 @@
             this.Controls.Add(this.buttonSaveEvent);
             this.Controls.Add(this.labelEditEventTitle);
             this.Controls.Add(this.richTextBoxPreviewCode);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormEditEvent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Event";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOldID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNewID)).EndInit();

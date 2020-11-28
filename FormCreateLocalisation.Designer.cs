@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateLocalisation));
             this.labelShowEventPathSaved = new System.Windows.Forms.Label();
             this.labelGenerateStatus = new System.Windows.Forms.Label();
             this.buttonSaveLocalisation = new System.Windows.Forms.Button();
@@ -283,7 +284,11 @@
             this.Controls.Add(this.numericUpDownEventCount);
             this.Controls.Add(this.checkBoxMultipleLocalisations);
             this.Controls.Add(this.checkBoxLiberationLocalisation);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormCreateLocalisation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Localisation";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIDEvent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEventCount)).EndInit();
